@@ -63,6 +63,24 @@
   </div>
 </header>
 
+<script>
+  function toggleDesc(button) {
+    const descContainer = button.parentElement;
+    const fullText = descContainer.querySelector('.full-text');
+    const shortText = descContainer.querySelector('.short-text');
+
+    if (fullText.classList.contains('d-none')) {
+      fullText.classList.remove('d-none');
+      shortText.classList.add('d-none');
+      button.textContent = 'Less';
+    } else {
+      fullText.classList.add('d-none');
+      shortText.classList.remove('d-none');
+      button.textContent = 'More';
+    }
+  }
+</script>
+
 
   <main class="main">
 
